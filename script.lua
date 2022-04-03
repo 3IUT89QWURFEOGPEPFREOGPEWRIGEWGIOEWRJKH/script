@@ -1,4 +1,4 @@
-Mod = {
+ModIDS = {
   3240913320,
  }
 
@@ -6,9 +6,9 @@ BoxingChampion = {
     3386474967,
     }
 
-function names()
+function swagnames()
 	for _,Player in pairs(game:GetService('Players'):GetChildren()) do
-		if table.find(Mod, Player.UserId) then
+		if table.find(ModIDS, Player.UserId) then
 			if Player.Character then
 				if Player.Character.Parent.Name == 'Players' then
 					Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)
@@ -32,5 +32,5 @@ function names()
 	end
 	end
 	end
-local success,err = pcall(names)
-return Mod
+local success,err = pcall(swagnames)
+return ModIDS
